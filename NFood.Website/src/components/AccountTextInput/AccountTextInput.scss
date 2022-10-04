@@ -1,0 +1,65 @@
+@import '../../styles/style.scss';
+
+.account-input {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .input-contain {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        flex: 1;
+        border: 2px solid #D3D3D3;
+        border-radius: 4px;
+
+        .input-field {
+            display: flex;
+            flex: 1;
+            padding-left: 15px;
+            height: 45px;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-family: $Regular;
+            font-size: 0.938rem;
+            border-radius: 4px;
+
+            :focus {
+                border: none;
+                outline: none;
+            }
+        }
+
+        &.on-error {
+            outline: none !important;
+            border: 2px solid #FF7070;
+        }
+
+        .right-icon {
+            height: 45px;
+            display: flex;
+            position: absolute;
+            z-index: 1;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1/1;
+            margin-right: 10px;
+        }
+
+        &.focusing {
+            border-radius: 4px;
+            border: 2px solid $primaryColor;
+        }
+    }
+
+    .input-error-text {
+        font-size: 0.75rem;
+        margin: 0;
+        margin-top: 5px;
+        padding: 0;
+        color: #FF7070;
+    }
+}

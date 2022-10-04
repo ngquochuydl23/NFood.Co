@@ -1,0 +1,67 @@
+@import '../../../../styles/style.scss';
+
+.login-contain {
+  display: flex;
+
+  .login-illustration {
+    width: 50%;
+  }
+
+  .login-form {
+    width: 30%;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    .form-title {
+      margin-top: 100px;
+      font-family: $SemiBold;
+      font-size: 2rem;
+    }
+
+    .form-email {
+      margin-top: 30px;
+    }
+
+    .form-password {
+      margin-top: 20px
+    }
+
+    .form-login-button {
+      width: 100%;
+      margin-top: 20px;
+      height: 45px;
+    }
+
+    .form-register-button {
+      width: 100%;
+      margin-top: 10px;
+      height: 45px;
+    }
+
+    .form-line-contain {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      font-size: 0.813rem;
+      font-family: $Medium;
+      color: #696969;
+      margin-top: 1.875em;
+      margin-bottom: 1.875em;
+
+      .line {
+        display: flex;
+        flex: 1;
+        height: 1px;
+        background: #D3D3D3
+      }
+
+      .left {
+        margin-right: 0.625em;
+      }
+
+      .right {
+        margin-left: 0.625em;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '/src/styles/style.scss';
+
+.finance-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+
+  .info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .number {}
+
+    .title {
+      margin: 0;
+      padding: 0;
+      color: $textSecondaryColor;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-self: center;
+    aspect-ratio: 1/1;
+    padding: 20px;
+    border-radius: 200px;
+    height: max-content;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}

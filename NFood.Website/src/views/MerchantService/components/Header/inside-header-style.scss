@@ -1,0 +1,47 @@
+@import '../../../../styles/style.scss';
+
+.inside-header {
+    margin: 0;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    padding-inline-start: 30px;
+    flex-direction: row;
+
+    > h2 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    .logo-contain {
+        display: flex;
+        flex: 1;
+        height: 35px;
+    }
+
+    .stack-text-navigation {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .text-navigation {
+        height: 35px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h4 {
+            font-size: 1rem;
+            max-lines: 1;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+    }
+}

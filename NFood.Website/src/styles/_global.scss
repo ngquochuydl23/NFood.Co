@@ -1,0 +1,30 @@
+@import 'variables';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $Regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    background-color: $background-color;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.merchant-layout {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+
+    .merchant-content {
+        flex-direction: column;
+        display: flex;
+        flex: 1;
+    }
+}
