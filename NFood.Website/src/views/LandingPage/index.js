@@ -9,6 +9,7 @@ import {
   ImageOurServiceMerchant
 } from '@assets/images';
 import LandingCover from './components/LandingCover';
+import LandingHeader from './components/LandingHeader';
 
 
 const OurServices = [
@@ -37,6 +38,7 @@ const LandingPage = () => {
 
   return (
     <div>
+      <LandingHeader />
       <LandingCover
         onSubmitAddress={() => { }} />
       <Container fixed>

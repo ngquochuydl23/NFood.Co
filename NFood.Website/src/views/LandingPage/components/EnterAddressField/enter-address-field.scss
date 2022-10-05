@@ -12,6 +12,22 @@
   padding-right: 5px;
   background-color: $background-color;
 
+
+  .input-abc {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: $Regular;
+    font-size: 1.025rem;
+
+    :focus {
+      border: none;
+      outline: none;
+    }
+  }
+
   input {
     display: flex;
     flex: 1;

@@ -2,18 +2,28 @@
 
 .landing-cover {
   display: flex;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
-  background-color: $background-color;
   margin-bottom: 50px;
-  background-color: aqua;
+  background-image: url("../.../../../../../assets/images/landing-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $background-color;
+
+  .dark-view {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 
   .landing-contain {
     display: flex;
     flex-direction: column;
     flex: 1;
     height: 100%;
-    background-color: antiquewhite;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -23,8 +33,13 @@
       font-family: $Bold;
       font-size: 3rem;
       width: 60%;
+      color: $textWhiteColor;
       justify-self: center;
       margin-bottom: 20px;
+    }
+
+    .subtitle {
+      color: $textWhiteColor;
     }
   }
 }

@@ -1,0 +1,35 @@
+.landing-header {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: row;
+  background-color: #FFF;
+
+  .contain {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-direction: row;
+
+    .logo-contain {
+      display: flex;
+      flex: 1;
+    }
+
+    .login-button {
+      height: 45px;
+      min-width: 150px;
+      border-radius: 10px;
+      margin-inline-start: 5px;
+    }
+
+    .become-partner {
+      height: 45px;
+      border-radius: 10px;
+    }
+  }
+}
