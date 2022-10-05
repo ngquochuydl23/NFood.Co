@@ -1,0 +1,35 @@
+@import '/src/styles/style.scss';
+
+.enter-address-field {
+  display: flex;
+  border-radius: 30px;
+  height: 50px;
+  width: 60%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  flex-direction: row;
+  padding-right: 5px;
+  background-color: $background-color;
+
+  input {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: $Regular;
+    font-size: 1.025rem;
+
+    :focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  .find-food-button {
+    height: 100%;
+    width: 150px;
+    border-radius: 30px;
+  }
+}

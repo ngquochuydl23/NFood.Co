@@ -2,8 +2,8 @@ import React, { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './styles/override/override_slidebar.scss'
 import OrderLayout from './views/OrderService/OrderLayout';
-import MerchantLayout from '@views/MerchantService/MerchantLayout';
 import { MerchantRoutes } from '@views/MerchantService/MerchantRoutes';
+import LandingPage from './views/LandingPage';
 
 
 // // Containers
@@ -26,6 +26,7 @@ function App() {
           </Route> */}
 
         <Route path="*" name="App Page">
+          <Route index element={<LandingPage />} />
           <Route path="order-food/*" element={<OrderLayout />} />
           <Route path="merchant/*" element={<MerchantRoutes />} />
         </Route>

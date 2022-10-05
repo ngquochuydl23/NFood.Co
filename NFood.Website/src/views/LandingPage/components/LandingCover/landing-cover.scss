@@ -1,0 +1,30 @@
+@import '/src/styles/style.scss';
+
+.landing-cover {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  background-color: $background-color;
+  margin-bottom: 50px;
+  background-color: aqua;
+
+  .landing-contain {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+
+    .title {
+      text-align: center;
+      font-family: $Bold;
+      font-size: 3rem;
+      width: 60%;
+      justify-self: center;
+      margin-bottom: 20px;
+    }
+  }
+}

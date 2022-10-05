@@ -1,8 +1,5 @@
 import React, { Suspense } from "react";
-import Sidebar from "./components/Sidebar";
-import Stack from '@mui/material/Stack';
 import { Route, Routes } from 'react-router-dom'
-import { MerchantProtectedRoute } from "@components/AppProtectedRoute";
 import MerchantLayout from "./MerchantLayout";
 import _ from 'lodash';
 
@@ -18,6 +15,7 @@ const RestaurantInfo = React.lazy(() => import("@views/MerchantService/Restauran
 const MerchantHome = React.lazy(() => import("@views/MerchantService/MerchantHome"));
 
 const routes = [
+  { path: '/', name: 'Merchant Home', element: MerchantHome },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/employess', name: 'Employess', element: Employees },
   { path: '/finance', name: 'Finance', element: Finance },
