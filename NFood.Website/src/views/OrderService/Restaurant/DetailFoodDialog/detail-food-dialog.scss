@@ -1,0 +1,83 @@
+@import '/src/styles/style.scss';
+
+.detail-food-dialog {
+  background-color: $background-color;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+
+  .food-image {
+    object-fit: contain;
+  }
+
+  .food-info-contain {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+
+    .food-name {
+      font-size: 2rem;
+      color: $textPrimaryColor;
+      font-family: $Medium;
+    }
+
+    .food-info {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-family: $Regular;
+      color: $textSecondaryColor;
+    }
+  }
+
+  .close-button {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    background-color: $background-color;
+    margin: 20px;
+    height: 40px;
+    border-radius: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .add-to-cart-button {
+    height: 50px;
+    margin: 20px;
+  }
+}
+
+.option-group {
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+
+  .group-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-family: $Bold;
+    text-transform: uppercase;
+  }
+
+  .required-text {
+    margin: 0;
+    color: $textSecondaryColor;
+    font-size: 0.9rem;
+  }
+}
+
+.option-item {
+  .checkbox {
+
+  }
+
+  .option-title {
+    font-size: 1rem;
+    font-family: $Medium;
+  }
+}

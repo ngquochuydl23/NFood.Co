@@ -3,7 +3,8 @@ import _ from 'lodash'
 import Sidebar from "./components/Sidebar";
 import { Outlet, useLocation } from 'react-router-dom';
 import InsideHeader from "./components/Header/InsideHeader";
-const MerchantLayout = () => {
+
+const InsideMerchantLayout = () => {
   return (
     <div className="merchant-layout">
       <Sidebar />
@@ -15,4 +16,4 @@ const MerchantLayout = () => {
   )
 }
 
-export default MerchantLayout;
+export default InsideMerchantLayout;

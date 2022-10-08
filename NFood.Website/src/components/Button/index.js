@@ -1,6 +1,6 @@
 import * as React from 'react';
+import classNames from 'classnames';
 import './button-style.scss'
-
 
 export const FilledButton = ({
   className,
@@ -13,7 +13,7 @@ export const FilledButton = ({
     <button
       type={type}
       disabled={disabled}
-      className={`main-button ${className}`}
+      className={classNames('main-button', className, { disable: disabled })}
       onClick={onClick}>
       <h4>{text}</h4>
     </button>

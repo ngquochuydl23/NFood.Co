@@ -12,3 +12,4 @@ export const IcEmployees = require('./ic_employees.svg').default;
 export const IcHelpCentre = require('./ic_help_centre.svg').default;
 export const IcTotalOrderToday = require('./ic_total_orders_today.svg').default;
 export const IcEarningToday = require('./ic_earning_today.svg').default;
+export const IcClose = require('./ic_close.svg').default;

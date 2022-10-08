@@ -42,4 +42,18 @@
       color: #d3d3d3;
     }
   }
+
+
+}
+
+.disable {
+  background-color: #d3d3d3;
+  color: #696969;
+
+  &:hover  {
+    background-color: #d3d3d3;
+    h4 {
+      color: #fff;
+    }
+  }
 }

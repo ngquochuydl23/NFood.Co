@@ -4,6 +4,7 @@ import './styles/override/override_slidebar.scss'
 import OrderLayout from './views/OrderService/OrderLayout';
 import { MerchantRoutes } from '@views/MerchantService/MerchantRoutes';
 import LandingPage from './views/LandingPage';
+import AppLayout from '@components/AppLayout';
 
 
 // // Containers

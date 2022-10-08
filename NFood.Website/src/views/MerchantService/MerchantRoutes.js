@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, Routes } from 'react-router-dom'
-import MerchantLayout from "./MerchantLayout";
+import InsideMerchantLayout from "./InsideMerchantLayout";
 import _ from 'lodash';
 
 
@@ -32,7 +32,7 @@ export const MerchantRoutes = () => {
           <Route index exact element={<MerchantHome />} />
           <Route path='login' exact element={<MerchantLogin />} />
           <Route path='register' exact element={<Register />} />
-          <Route path='/' element={<MerchantLayout />}>
+          <Route path='/' element={<InsideMerchantLayout />}>
             {_.map(routes, (route, idx) => <Route
               key={idx}
               path={route.path}
