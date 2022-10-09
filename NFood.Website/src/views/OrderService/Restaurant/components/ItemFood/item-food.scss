@@ -1,0 +1,42 @@
+@import '/src/styles/style.scss';
+
+.item-food {
+  display: flex;
+  flex: 1;
+  height: 120px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+  .food-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    margin-right: 10px;
+
+    .name-ingredients {
+      .food-name {}
+
+      .ingredients {
+        margin: 0;
+        margin-top: 5px;
+        font-size: 0.9rem;
+      }
+    }
+
+
+    .cost {
+      bottom: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  .food-image {
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    border: 1px solid #0000000a;
+    border-radius: 4px;
+  }
+}

@@ -3,8 +3,9 @@ import PageContainer from "@components/PageContainer";
 import DetailFoodDialog from "../Restaurant/DetailFoodDialog";
 import RestaurantHeader from "./components/RestaurantHeader";
 import MenuHeader from "./components/MenuHeader";
-import { Grid } from "@mui/material";
+import Stack from '@mui/material/Stack';
 import './restaurant.scss'
+import ItemCategory from "./components/ItemCategory";
 
 
 const restaurantJson = {
@@ -17,6 +18,7 @@ const restaurantJson = {
 const Restaurant = () => {
   const [open, setOpen] = useState(true);
   const [restaurant, setRestaurant] = useState(restaurantJson);
+
   return (
     <PageContainer>
       <RestaurantHeader
@@ -24,6 +26,26 @@ const Restaurant = () => {
         estimatedTime="40 - 65 min"
       />
       <MenuHeader />
+      <Stack spacing={2} mt={2}>
+        <ItemCategory
+          onItemFoodClick={() => {
+            console.log("Alo")
+            setOpen(true);
+          }}
+          title="Noodles"
+          subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
+
+        <ItemCategory
+          onItemFoodClick={() => {
+            console.log("Alo")
+            setOpen(true);
+          }}
+          title="Noodles"
+          subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
+
+      </Stack>
+
+
       <DetailFoodDialog
         isOpen={open}
         onClose={() => {

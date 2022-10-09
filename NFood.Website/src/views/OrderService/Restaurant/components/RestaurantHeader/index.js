@@ -13,6 +13,15 @@ const RestaurantHeader = ({
   detail
 }) => {
   const [openViewDetail, setOpenViewDetail] = useState(false);
+
+  const StartOrderGroup = () => {
+    return (
+      <div>
+
+      </div>
+    )
+  }
+
   const ViewDetailRestaurantButton = () => {
     return (
       <div
@@ -38,16 +47,12 @@ const RestaurantHeader = ({
       <div className="restaurant-info">
         <h1 className="restaurant-name">{restaurantName}</h1>
         <p className="cuisines">{cuisines.join(" · ")}</p>
-
         <p className="others-info">
           <span className="rating">{rating} </span>
           2.70 miles away·Opens at 11:00·£4.49 delivery·£10.00 minimum
         </p>
-
         <ViewDetailRestaurantButton />
       </div>
-
-
       <ViewDetailDialog
         isOpen={openViewDetail}
         onClose={() => setOpenViewDetail(false)} />

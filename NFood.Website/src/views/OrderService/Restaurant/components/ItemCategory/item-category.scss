@@ -1,0 +1,13 @@
+@import '/src/styles/style.scss';
+
+.item-category {
+  .title {
+
+  }
+  .subtitle {
+    margin: 0;
+    margin-top: 5px;
+    color: $textSecondaryColor;
+    font-size: 0.9rem;
+  }
+}
