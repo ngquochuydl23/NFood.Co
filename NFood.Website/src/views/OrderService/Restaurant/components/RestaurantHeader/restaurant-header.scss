@@ -1,0 +1,70 @@
+@import '/src/styles/style.scss';
+
+.restaurant-header {
+  display: flex;
+  flex: 1;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .restaurant-image {
+    display: flex;
+    flex: 1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .restaurant-info {
+    display: flex;
+    flex: 2;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex-direction: column;
+
+    .restaurant-name {}
+
+    .cuisines {
+      margin: 0;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .others-info {
+      margin: 0;
+      color: $textSecondaryColor;
+      margin-top: 10px;
+
+      .rating {
+        color: $primaryColor;
+      }
+    }
+
+    .view-res-detail {
+      display: flex;
+      flex-direction: row;
+      width: fit-content;
+      height: fit-content;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 4px;
+      align-items: center;
+      background-color: $white-smoke;
+
+      .child {
+        margin-inline-start: 10px;
+        margin-inline-end: 10px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        p {
+          margin: 0;
+          margin-top: 2.5px;
+        }
+      }
+
+      &:hover {
+        background-color: #d3d3d3;
+      }
+    }
+  }
+}

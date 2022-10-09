@@ -1,19 +1,26 @@
 import React, { useState } from "react";
 import PageContainer from "@components/PageContainer";
 import DetailFoodDialog from "../Restaurant/DetailFoodDialog";
-import './restaurant.scss'
 import RestaurantHeader from "./components/RestaurantHeader";
 import MenuHeader from "./components/MenuHeader";
 import { Grid } from "@mui/material";
+import './restaurant.scss'
+
+
+const restaurantJson = {
+  restaurantName: "Popeyes Louisiana Kitchen",
+  restautantImage: "https://rs-menus-api.roocdn.com/images/e15ff554-f996-47d4-b3ab-cff14db84b5f/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop",
+  cuisines: ["Chicken", "Fried Chicken", "Halal"],
+  rating: "4.6 Excellent(500+)"
+}
 
 const Restaurant = () => {
   const [open, setOpen] = useState(true);
+  const [restaurant, setRestaurant] = useState(restaurantJson);
   return (
     <PageContainer>
       <RestaurantHeader
-        restaurantName="Popeyes Louisiana Kitchen"
-        restautantImage=""
-        cuisines="Chicken·Fried Chicken·Halal"
+        {...restaurant}
         estimatedTime="40 - 65 min"
       />
       <MenuHeader />
