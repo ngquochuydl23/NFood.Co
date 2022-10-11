@@ -43,6 +43,14 @@ const Restaurant = () => {
           title="Noodles"
           subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
 
+        <ItemCategory
+          onItemFoodClick={() => {
+            console.log("Alo")
+            setOpen(true);
+          }}
+          title="Noodles"
+          subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
+
       </Stack>
 
 
