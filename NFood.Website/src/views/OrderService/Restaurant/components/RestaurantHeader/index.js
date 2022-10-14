@@ -54,6 +54,12 @@ const RestaurantHeader = ({
         <ViewDetailRestaurantButton />
       </div>
       <ViewDetailDialog
+        detail={{
+          ...detail,
+          restaurantName,
+          cuisines,
+          rating
+        }}
         isOpen={openViewDetail}
         onClose={() => setOpenViewDetail(false)} />
     </div>

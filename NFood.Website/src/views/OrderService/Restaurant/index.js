@@ -4,15 +4,30 @@ import DetailFoodDialog from "../Restaurant/DetailFoodDialog";
 import RestaurantHeader from "./components/RestaurantHeader";
 import MenuHeader from "./components/MenuHeader";
 import Stack from '@mui/material/Stack';
-import './restaurant.scss'
 import ItemCategory from "./components/ItemCategory";
+import _ from 'lodash'
+import './restaurant.scss'
 
+
+const foods = new Array(4).fill('').map((it, i) => ({
+  name: 'The Deluxe Large Sharer',
+  ingredients: '2 Classic chicken sandwiches, 2 regular fries & 8 hot wings',
+  cost: '$10',
+  image: "https://rs-menus-api.roocdn.com/images/5be29606-2d3a-44d2-86a1-06bf6505d070/image.jpeg?width=543&height=305&auto=webp&format=jpg&fit=crop"
+}));
+
+const categories = new Array(10).fill('').map((it, i) => ({
+  title: 'Noodles',
+  subtitle: "All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce.",
+  foods: foods
+}));
 
 const restaurantJson = {
   restaurantName: "Popeyes Louisiana Kitchen",
   restautantImage: "https://rs-menus-api.roocdn.com/images/e15ff554-f996-47d4-b3ab-cff14db84b5f/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop",
   cuisines: ["Chicken", "Fried Chicken", "Halal"],
-  rating: "4.6 Excellent(500+)"
+  rating: "4.6 Excellent(500+)",
+  categories: categories
 }
 
 const Restaurant = () => {
@@ -27,30 +42,15 @@ const Restaurant = () => {
       />
       <MenuHeader />
       <Stack spacing={2} mt={2}>
-        <ItemCategory
-          onItemFoodClick={() => {
-            console.log("Alo")
-            setOpen(true);
-          }}
-          title="Noodles"
-          subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
-
-        <ItemCategory
-          onItemFoodClick={() => {
-            console.log("Alo")
-            setOpen(true);
-          }}
-          title="Noodles"
-          subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
-
-        <ItemCategory
-          onItemFoodClick={() => {
-            console.log("Alo")
-            setOpen(true);
-          }}
-          title="Noodles"
-          subtitle="All of our meats are marinated, hung and fan-dried for at least 24 hours before roasting in a traditional Cantonese bullet oven. Each lunchbox is served with pak choi, steamed jasmine rice, soy and rock sugar gravy and a spicy chilli vinegar sauce." />
-
+        {_.map(restaurant.categories, (item, idx) => (
+          <ItemCategory
+            {...item}
+            onItemFoodClick={() => {
+              console.log("Alo")
+              setOpen(true);
+            }}
+          />
+        ))}
       </Stack>
 
 

@@ -1,0 +1,62 @@
+@import '/src/styles/style.scss';
+
+
+
+.view-detail-dialog {
+
+  background-color: $background-color;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+
+  .map-layout {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    flex: 1;
+  }
+
+
+  .close-button {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    background-color: $background-color;
+    margin: 20px;
+    height: 40px;
+    border-radius: 200px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .res-info-contain {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+
+    .res-name {
+      font-size: 2rem;
+      color: $textPrimaryColor;
+      font-family: $Medium;
+    }
+
+    .cuisines {
+      margin: 0;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .others-info {
+      margin: 0;
+      color: $textSecondaryColor;
+      margin-top: 10px;
+
+    }
+  }
+}
