@@ -1,7 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px"
+  y="0px"
+  viewBox="0 0 1000 1000"
+  enable-background="new 0 0 1000 1000"
+  xml:space="preserve"
+>
 <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-<g><path d="M900.9,143.6H99.1c-50.1,0-89.1,39-89.1,89.1v534.5c0,50.1,39,89.1,89.1,89.1h801.8c50.1,0,89.1-39,89.1-89.1V232.7C990,182.6,951,143.6,900.9,143.6z M65.7,344.1h868.6v78H65.7V344.1z M99.1,199.3h801.8c16.7,0,33.4,16.7,33.4,33.4v55.7H65.7v-55.7C65.7,216,82.4,199.3,99.1,199.3z M900.9,800.7H99.1c-16.7,0-33.4-16.7-33.4-33.4V477.7h868.6v289.5C934.3,789.5,917.6,800.7,900.9,800.7z"  fill="#FFF"/><path d="M850.8,650.3H594.7c-16.7,0-27.8,11.1-27.8,27.8c0,16.7,11.1,27.8,27.8,27.8h256.1c16.7,0,27.8-11.1,27.8-27.8C878.6,661.5,861.9,650.3,850.8,650.3z"  fill="#FFF"/></g>
+<g><path
+      d="M900.9,143.6H99.1c-50.1,0-89.1,39-89.1,89.1v534.5c0,50.1,39,89.1,89.1,89.1h801.8c50.1,0,89.1-39,89.1-89.1V232.7C990,182.6,951,143.6,900.9,143.6z M65.7,344.1h868.6v78H65.7V344.1z M99.1,199.3h801.8c16.7,0,33.4,16.7,33.4,33.4v55.7H65.7v-55.7C65.7,216,82.4,199.3,99.1,199.3z M900.9,800.7H99.1c-16.7,0-33.4-16.7-33.4-33.4V477.7h868.6v289.5C934.3,789.5,917.6,800.7,900.9,800.7z"
+      fill="#606060"
+    /><path
+      d="M850.8,650.3H594.7c-16.7,0-27.8,11.1-27.8,27.8c0,16.7,11.1,27.8,27.8,27.8h256.1c16.7,0,27.8-11.1,27.8-27.8C878.6,661.5,861.9,650.3,850.8,650.3z"
+      fill="#606060"
+    /></g>
 </svg>

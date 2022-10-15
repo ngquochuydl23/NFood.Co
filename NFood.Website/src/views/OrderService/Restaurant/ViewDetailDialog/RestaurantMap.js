@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import Map from 'react-map-gl'
-import './view-detail-dialog.scss'
-import MapboxConfig from '@components/MapboxConfig';
+import React, { useState } from "react";
+import Map from "react-map-gl";
+import "./view-detail-dialog.scss";
+import MapboxConfig from "@components/MapboxConfig";
 
 const RestaurantMap = (lat, lng) => {
   return (
     <Map
-      className='map-layout'
+      className="map-layout"
       {...MapboxConfig}
       initialViewState={{
-        longitude: lat,
-        latitude: lng,
-        zoom: 8
+        longitude: 40,
+        latitude: -100,
+        zoom: 8,
       }}
     />
-  )
-}
+  );
+};
 
 export default RestaurantMap;
