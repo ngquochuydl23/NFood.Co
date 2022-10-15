@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Grid from '@mui/material/Unstable_Grid2';
-import ItemFood from "../ItemFood";
-import './item-category.scss'
+import FoodItem from "../FoodItem";
 import { ReponsiveQueryBetween } from "src/utils/ReponsiveUtil";
 import _ from 'lodash'
+import './category-item.scss'
 
-const ItemCategory = ({
+
+const CategoryItem = ({
   title,
   subtitle,
   foods,
-  onItemFoodClick
+  onFoodItemClick
 }) => {
   const betweenXSandSM = ReponsiveQueryBetween('xs', 'sm')
   const betweenSMandMD = ReponsiveQueryBetween('sm', 'md')
@@ -23,7 +24,7 @@ const ItemCategory = ({
   }
 
   return (
-    <div className="item-category">
+    <div className="category-item">
       <h3 className="title">{title}</h3>
       <p className="subtitle">{subtitle}</p>
       <Grid
@@ -33,9 +34,9 @@ const ItemCategory = ({
         {_.map(foods, (food, idx) => {
           return (
             <Grid xs={xsItem()}>
-              <ItemFood
+              <FoodItem
                 {...food}
-                onItemFoodClick={onItemFoodClick} />
+                onFoodItemClick={onFoodItemClick} />
             </Grid>
           )
         })}
@@ -44,4 +45,4 @@ const ItemCategory = ({
   )
 }
 
-export default ItemCategory
+export default CategoryItem

@@ -49,14 +49,67 @@
     .cuisines {
       margin: 0;
       font-size: 1rem;
-      margin-top: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
     }
 
     .others-info {
       margin: 0;
       color: $textSecondaryColor;
-      margin-top: 10px;
+      margin-top: 5px;
 
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+      background-color: #d3d3d3;
+    }
+
+    .info-item {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+
+      .title {
+        margin-inline-start: 20px;
+        margin-inline-end: 10px;
+        font-size: 1.1rem;
+        color: $textPrimaryColor;
+        font-family: $Medium;
+      }
+    }
+
+    .MuiAccordion-root {
+      border-radius: 0;
+      background-color: $white;
+      box-shadow: 0px 0px 0px 0px;
+      padding: 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+        padding: 0;
+      }
+
+      .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root.Mui-disabled {
+        opacity: 1;
+      }
+    }
+  }
+
+  .shedule-item {
+    margin-inline-start: 40px;
+
+    .days-of-week {
+      font-size: 1.1rem;
+      font-weight: $Medium;
+    }
+
+    .period-item {
+      margin: 0;
+      margin-top: 5px;
     }
   }
 }

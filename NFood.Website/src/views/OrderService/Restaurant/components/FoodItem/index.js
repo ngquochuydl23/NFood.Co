@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import './item-food.scss'
+import './food-item.scss'
 
-const ItemFood = ({
+const FoodItem = ({
   name,
   ingredients,
   image,
   cost,
-  onItemFoodClick
+  onFoodItemClick
 }) => {
   return (
     <div
-      className="item-food"
-      onClick={() => onItemFoodClick({
+      className="food-item"
+      onClick={() => onFoodItemClick({
         name,
         ingredients,
         image,
@@ -32,4 +32,4 @@ const ItemFood = ({
   )
 }
 
-export default ItemFood
+export default FoodItem

@@ -4,9 +4,9 @@ import DetailFoodDialog from "../Restaurant/DetailFoodDialog";
 import RestaurantHeader from "./components/RestaurantHeader";
 import MenuHeader from "./components/MenuHeader";
 import Stack from '@mui/material/Stack';
-import ItemCategory from "./components/ItemCategory";
-import _ from 'lodash'
-import './restaurant.scss'
+import CategoryItem from "./components/CategoryItem";
+import _ from 'lodash';
+import './restaurant.scss';
 
 
 const foods = new Array(4).fill('').map((it, i) => ({
@@ -27,47 +27,53 @@ const restaurantJson = {
   restautantImage: "https://rs-menus-api.roocdn.com/images/e15ff554-f996-47d4-b3ab-cff14db84b5f/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop",
   cuisines: ["Chicken", "Fried Chicken", "Halal"],
   rating: "4.6 Excellent(500+)",
-  categories: categories
+  categories: categories,
+  detail: {
+    schedule: [
+      { daysOfWeek: 'Monday -> Saturday', start: "2010-12-31T23:07:00.000Z", end: "2010-12-31T22:00:00.000Z"},
+      { daysOfWeek: 'Sunday', start: "2010-12-31T07:00:00.000Z", end: "2010-12-31T17:00:00.000Z"}
+    ]
+  }
 }
 
 const Restaurant = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [restaurant, setRestaurant] = useState(restaurantJson);
 
   return (
-    <PageContainer>
+    <React.Fragment>
       <RestaurantHeader
         {...restaurant}
         estimatedTime="40 - 65 min"
       />
-      <MenuHeader />
-      <Stack spacing={2} mt={2}>
-        {_.map(restaurant.categories, (item, idx) => (
-          <ItemCategory
-            {...item}
-            onItemFoodClick={() => {
-              console.log("Alo")
-              setOpen(true);
-            }}
-          />
-        ))}
-      </Stack>
+      <MenuHeader
+        categories={restaurant.categories} />
+      <PageContainer>
+        <Stack spacing={2} mt={2}>
+          {_.map(restaurant.categories, (item, idx) => (
+            <CategoryItem
+              {...item}
+              onFoodItemClick={() => {
+                setOpen(true);
+              }}
+            />
+          ))}
+        </Stack>
+        <DetailFoodDialog
+          isOpen={open}
+          onClose={() => {
+            setOpen(false)
+          }}
+          detailFood={{
+            foodName: 'BBQ Combo for 1',
+            foodInfo: 'Breaded chicken fillet burger coated in our BBQ sauce, accompanied by 2 BBQ coated spicy breaded chicken wings, served with regular fries, side and drink.',
+            foodImage: `https://rs-menus-api.roocdn.com/images/e8ecf635-af01-4b20-bf77-148dd9d1e06f/image.jpeg?width=543&height=305&auto=webp&format=jpg&fit=crop`
+          }}
+          onAddedToCard={() => {
 
-
-      <DetailFoodDialog
-        isOpen={open}
-        onClose={() => {
-          setOpen(false)
-        }}
-        detailFood={{
-          foodName: 'BBQ Combo for 1',
-          foodInfo: 'Breaded chicken fillet burger coated in our BBQ sauce, accompanied by 2 BBQ coated spicy breaded chicken wings, served with regular fries, side and drink.',
-          foodImage: `https://rs-menus-api.roocdn.com/images/e8ecf635-af01-4b20-bf77-148dd9d1e06f/image.jpeg?width=543&height=305&auto=webp&format=jpg&fit=crop`
-        }}
-        onAddedToCard={() => {
-
-        }} />
-    </PageContainer>
+          }} />
+      </PageContainer>
+    </React.Fragment>
   )
 }
 

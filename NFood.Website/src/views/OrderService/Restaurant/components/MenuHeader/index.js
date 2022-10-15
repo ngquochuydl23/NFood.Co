@@ -2,6 +2,8 @@ import React from "react";
 import { styled } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import Container from '@mui/material/Container';
+import _ from 'lodash';
 import './menu-header.scss'
 
 const AntTabs = styled(Tabs)({
@@ -40,7 +42,7 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
   },
 }));
 
-const MenuHeader = () => {
+const MenuHeader = ({ categories }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -49,22 +51,20 @@ const MenuHeader = () => {
 
   return (
     <div className="menu-header">
-      <AntTabs
-        value={value}
-        scrollButtons
-        onChange={handleChange}
-        allowScrollButtonsMobile
-        aria-label="ant example">
-        <AntTab label="Noodles" />
-        <AntTab label="Rice Dishes" />
-        <AntTab label="Curry Dishes" />
-        <AntTab label="Salads" />
-        <AntTab label="Soups" />
-        <AntTab label="Side Orders" />
-        <AntTab label="Starters" />
-        <AntTab label="Beverages" />
-        <AntTab label="Desserts" />
-      </AntTabs>
+      <Container maxWidth='xl'>
+        <AntTabs
+          value={value}
+          scrollButtons
+          onChange={handleChange}
+          allowScrollButtonsMobile
+          aria-label="ant example">
+          {_.map(categories, (item, idx) => (
+            <AntTab
+              label={item.title}
+            />
+          ))}
+        </AntTabs>
+      </Container >
     </div>
   );
 }
