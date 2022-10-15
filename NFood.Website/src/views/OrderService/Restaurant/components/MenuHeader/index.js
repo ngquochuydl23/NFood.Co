@@ -49,7 +49,12 @@ const MenuHeader = () => {
 
   return (
     <div className="menu-header">
-      <AntTabs value={value} onChange={handleChange} aria-label="ant example">
+      <AntTabs
+        value={value}
+        scrollButtons
+        onChange={handleChange}
+        allowScrollButtonsMobile
+        aria-label="ant example">
         <AntTab label="Noodles" />
         <AntTab label="Rice Dishes" />
         <AntTab label="Curry Dishes" />
