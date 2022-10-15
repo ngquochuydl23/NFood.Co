@@ -15,4 +15,5 @@ export const IcEarningToday = require('./ic_earning_today.svg').default;
 export const IcClose = require('./ic_close.svg').default;
 export const IcViewResInfo = require('./ic_view_res_info.svg').default;
 export const IcArrowRight = require('./ic_arrow_right.svg').default;
-export const IcAddressDetail = require('./ic_address_detail.svg').default
+export const IcAddressDetail = require('./ic_address_detail.svg').default;
+export const IcRatingRestaurant = require('./ic_rating_restaurant.svg').default;

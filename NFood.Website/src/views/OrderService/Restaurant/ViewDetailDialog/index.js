@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DialogContainer from '@components/Dialog'
 import { Icon } from '@components/Icon';
-import { IcAddressDetail, IcClose } from '@assets/icons';
+import { IcAddressDetail, IcClose, IcRatingRestaurant } from '@assets/icons';
 import RestaurantMap from './RestaurantMap';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -16,7 +16,6 @@ const ViewDetailDialog = ({
   onClose,
   detail,
 }) => {
-
   const { cuisines, restaurantName, rating, schedule } = detail;
   const handleClose = () => {
     onClose();
@@ -43,7 +42,7 @@ const ViewDetailDialog = ({
             aria-controls="panel1a-content"
             id="panel1a-header" >
             <div className='info-item'>
-              <Icon icon={leftIcon} size={35} />
+              <Icon icon={leftIcon} size={30} />
               <h4 className='title'>{text}</h4>
             </div>
           </AccordionSummary>
@@ -86,9 +85,8 @@ const ViewDetailDialog = ({
           </InFoItem>
           <div className='line' />
           <InFoItem
-            leftIcon={IcAddressDetail}
+            leftIcon={IcRatingRestaurant}
             text={rating} />
-          
         </div>
         <div
           className='close-button'
