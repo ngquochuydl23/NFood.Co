@@ -26,7 +26,7 @@ const restaurantJson = {
   restaurantName: "Popeyes Louisiana Kitchen",
   restautantImage: "https://rs-menus-api.roocdn.com/images/e15ff554-f996-47d4-b3ab-cff14db84b5f/image.jpeg?width=533&height=300&auto=webp&format=jpg&fit=crop",
   cuisines: ["Chicken", "Fried Chicken", "Halal"],
-  rating: "4.6 Excellent(500+)",
+  rating: "4.6 Excellent(500+)4.6 Excellent(500+)",
   categories: categories,
   detail: {
     schedule: [

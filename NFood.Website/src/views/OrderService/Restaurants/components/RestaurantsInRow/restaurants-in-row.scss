@@ -1,0 +1,80 @@
+@import '/src/styles/style.scss';
+
+.restaurants-in-row {
+  margin-top: 20px;
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+
+
+  .item {
+    width: 300px;
+    aspect-ratio: 1.05/1;
+  }
+
+  .container::-webkit-scrollbar {
+    width: 8px;
+    background-color: #ddd;
+  }
+
+  /**  STYLE 11 */
+  .container::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background: #ddd;
+  }
+
+  .container::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #999;
+  }
+
+  .container::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+
+  .container::-webkit-scrollbar-thumb:active {
+    background: #333;
+  }
+
+
+
+  .separator {
+    width: 10px;
+
+  }
+
+  .react-horizontal-scrolling-menu--scroll-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+
+  .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+
+}
+
+
+.container {
+  overflow: hidden !important;
+  overflow-x: scroll;
+
+  .section {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    width: 400px;
+  }
+}

@@ -81,7 +81,6 @@ const ViewDetailDialog = ({
                 <ScheduleItem {...item} />
               ))}
             </Stack>
-
           </InFoItem>
           <div className='line' />
           <InFoItem
